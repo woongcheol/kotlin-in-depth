@@ -42,3 +42,15 @@ fun hexDigitTwo(n: Int): Char {
         else -> return '?'
     }
 }
+
+fun hexDigitThree(n: Int) = when {
+    n in 0..9 -> '0' + n
+    n in 10..15 -> 'A' + n - 10
+    else -> '?'
+}
+
+fun hexDigitFout(n: Int) = when(n) {
+    in 0..9 -> '0' + n
+    in 10..15 -> 'A' + n - 10
+    else -> '?'
+}
