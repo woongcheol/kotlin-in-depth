@@ -1,12 +1,17 @@
-class PersonKotlin(val name: String) {
-    var age: Int = 0
+// 메소드 오버라이드
+open class Base {
+    open fun v(a:Int, b:Int) {
+        println(a+b)
+    }
+}
 
-    constructor(name: String, age: Int) : this(name) {
-        this.age = age
+class Derived : Base() {
+    override fun v(a: Int, b: Int) {
+        super.v(a, b)
     }
 }
 
 fun main() {
-    val p = PersonKotlin("jin", 21)
-    println("name: ${p.name}, age: ${p.age}")
+    val sum = Derived()
+    sum.v(1, 2)
 }
