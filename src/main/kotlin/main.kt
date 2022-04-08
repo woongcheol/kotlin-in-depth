@@ -1,6 +1,9 @@
 fun main() {
-    var str : String? = "Hello Kotlin"
-    str = null
-    println("str:$str, str.length: ${str?.length ?: -1}")
+    // 자료형 변환
+    val a: Int = 1
+    val b: Double = a.toDouble()
+    val c: Int = 1.1.toInt()
+
+    val result = 1L + 3
 }
 
